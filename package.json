@@ -1,17 +1,35 @@
 {
-  "name": "frontend",
+  "name": "backend",
+  "author": "Chad Casey",
   "version": "1.0.0",
-  "description": "The backend for news explorer, implemented with expressJS &amp; nodeJS",
-  "main": ".eslintrc.js",
+  "description": "News Explorer backend",
+  "main": "app.js",
   "scripts": {
     "lint": "npx eslint .",
-    "dev": "nodemon app.js",
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
-  "author": "Chad Casey",
   "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "express-rate-limit": "^7.2.0",
+    "express-winston": "^4.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.6.1",
+    "validator": "^13.11.0",
+    "winston": "^3.13.0"
+  },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
   }
 }
