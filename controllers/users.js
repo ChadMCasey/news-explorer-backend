@@ -28,7 +28,9 @@ const signupUser = (req, res, next) => {
     .then((hash) => User.create({ name, email, password: hash }))
     .then((user) => res.status(201).send(user))
     .catch((err) => {
-      if (err.name === "ValidationError") {
+      if (err.code && err.code === 11000) {
+        next(new ConflictError("The Provided email is unavaiable."));
+      } else if (err.name === "ValidationError") {
         next(new BadRequestError("The data entered is invalid"));
       } else if (err.name === "MongoServerError") {
         next(new ConflictError("An error occured on the server."));
