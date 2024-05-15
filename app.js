@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const helmet = require("helmet");
 const { errors } = require("celebrate");
+mongoose.set("strictQuery", true);
 
 // internal
 const indexRouter = require("./routes/index");

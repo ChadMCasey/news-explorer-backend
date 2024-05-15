@@ -1,4 +1,4 @@
-module.exports = class BadRequestError extends Errror {
+module.exports = class BadRequestError extends Error {
   constructor(message) {
     super(message);
     this.status = 400;
