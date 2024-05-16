@@ -13,6 +13,7 @@ const getArticles = (req, res, next) => {
 
 const postArticle = (req, res, next) => {
   const { keyword, title, text, date, source, link, image } = req.body;
+
   Article.create({
     keyword,
     title,
@@ -37,6 +38,7 @@ const postArticle = (req, res, next) => {
 
 const deleteArticle = (req, res, next) => {
   Article.findById(req.params.articleId)
+    .select("+owner")
     .orFail()
     .then((article) => {
       if (article.owner.toString() !== req.user._id) {

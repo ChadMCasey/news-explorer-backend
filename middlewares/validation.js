@@ -5,7 +5,7 @@ const validateURL = (value, helpers) => {
   if (validator.isURL(value)) {
     return value;
   }
-  return helpers.errors("string.uri");
+  return helpers.error("string.uri");
 };
 
 const validateUserRegister = celebrate({
@@ -57,6 +57,10 @@ const validateArticleBody = celebrate({
     image: Joi.string().required().custom(validateURL).messages({
       "string.empty": "the 'image' field must be filled in",
       "string.uri": "the 'image' field must be a valid url",
+    }),
+    owner: Joi.string().alphanum().length(24).messages({
+      "string.empty":
+        "the 'owner' field must be filled in with a valid owner id",
     }),
   }),
 });
