@@ -1,7 +1,7 @@
 # news-explorer-backend
 
-The backend for news explorer, implemented with expressJS &amp; nodeJS
+NewsExplorer is a 2 page full stack MERN application. It integrates [NewsAPI](https://newsapi.org/docs) for querying & displaying news articles.
 
 ## Use this domain to access the server:
 
-[https://newsexplorer.iii.cl/](https://newsexplorer.iii.cl/)
+[https://api.newsexplorer.iii.cl/](https://api.newsexplorer.iii.cl/)
