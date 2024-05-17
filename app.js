@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const helmet = require("helmet");
 const { errors } = require("celebrate");
+require("dotenv").config();
+
 mongoose.set("strictQuery", true);
 
 // internal
@@ -11,8 +13,6 @@ const indexRouter = require("./routes/index");
 const requestLimiter = require("./middlewares/requestLimiter");
 const centralizedError = require("./middlewares/centralizedError");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
-
-require("dotenv").config();
 
 const { PORT = 3001 } = process.env;
 

@@ -1,0 +1,22 @@
+[1mdiff --git a/app.js b/app.js[m
+[1mindex 6b12a12..cdd1c9d 100644[m
+[1m--- a/app.js[m
+[1m+++ b/app.js[m
+[36m@@ -4,6 +4,8 @@[m [mconst mongoose = require("mongoose");[m
+ const cors = require("cors");[m
+ const helmet = require("helmet");[m
+ const { errors } = require("celebrate");[m
+[32m+[m[32mrequire("dotenv").config();[m
+[32m+[m
+ mongoose.set("strictQuery", true);[m
+ [m
+ // internal[m
+[36m@@ -12,8 +14,6 @@[m [mconst requestLimiter = require("./middlewares/requestLimiter");[m
+ const centralizedError = require("./middlewares/centralizedError");[m
+ const { requestLogger, errorLogger } = require("./middlewares/logger");[m
+ [m
+[31m-require("dotenv").config();[m
+[31m-[m
+ const { PORT = 3001 } = process.env;[m
+ [m
+ const app = express();[m
