@@ -1,0 +1,31 @@
+const RESOURCE_SUCCESSFULLY_CREATED_STATUS = 201;
+const DUPLICATE_ERRROR_STATUS = 11000;
+
+const CAST_ERROR = "CastError";
+const VALIDATION_ERROR = "ValidationError";
+const INVALID_DATA_ERROR = "InvalidData";
+const DOCUMENT_NOT_FOUND_ERROR = "DocumentNotFoundError";
+const MONGO_SERVER_ERROR = "MongoServerError";
+
+const BAD_REQUEST_ERROR_MESSAGE = "Data format is invalid.";
+const VALIDATION_ERROR_MESSAGE = "The data could not be validated.";
+const FORBIDDEN_ERROR_MESSAGE = "User unauthorized to complete this action.";
+const DOCUMENT_NOT_FOUND_ERROR_MESSAGE = "Requested resource not found";
+const SERVER_ERROR_MESSAGE = "An error occured on the server.";
+const DUPLICATE_EMAIL_ERROR = "The Provided email is unavaiable.";
+
+module.exports = {
+  CAST_ERROR,
+  VALIDATION_ERROR,
+  DOCUMENT_NOT_FOUND_ERROR,
+  BAD_REQUEST_ERROR_MESSAGE,
+  VALIDATION_ERROR_MESSAGE,
+  FORBIDDEN_ERROR_MESSAGE,
+  DOCUMENT_NOT_FOUND_ERROR_MESSAGE,
+  DUPLICATE_EMAIL_ERROR,
+  MONGO_SERVER_ERROR,
+  DUPLICATE_ERRROR_STATUS,
+  RESOURCE_SUCCESSFULLY_CREATED_STATUS,
+  SERVER_ERROR_MESSAGE,
+  INVALID_DATA_ERROR,
+};
