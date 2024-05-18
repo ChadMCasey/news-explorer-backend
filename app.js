@@ -13,14 +13,13 @@ const indexRouter = require("./routes/index");
 const requestLimiter = require("./middlewares/requestLimiter");
 const centralizedError = require("./middlewares/centralizedError");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
-
-const { PORT = 3001 } = process.env;
+const { PORT, DB_ADDRESS } = require("./utils/config");
 
 const app = express();
 
 // connect to DB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/news-explorer-db")
+  .connect(DB_ADDRESS)
   .then(() => {
     console.log("Successfully connected to NewsExplorerDB...");
   })
